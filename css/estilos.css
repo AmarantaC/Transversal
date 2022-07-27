@@ -1,0 +1,708 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Inica Encabezado*/
+
+header{
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    background-color: white;
+    align-items: center;
+    z-index: 1;
+
+}
+
+#head{     
+    flex-direction: row;
+    flex-wrap: wrap;      
+    margin: auto;
+    width: 100%;
+    display: flex;        
+    box-shadow: 0em .4em .4em rgb(196, 196, 196); 
+    height: 7em;
+}
+
+.transversal{
+    width: 100%;
+    max-width: 11.25em;
+    margin: auto; 
+    display: flex; 
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.transversal img{
+    width: 100%;
+    max-width: 10em;
+    margin: auto;    
+}
+
+.logomovil{
+    display: none;
+}
+
+.menu{    
+    margin: auto;    
+    width: 45em;
+    justify-content: space-between; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu a{
+    width: auto;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;   
+    font-weight: 400;
+    color: #9F94C7;
+    height: 2em;
+}
+
+.menu a:hover{
+    color: #524A7B;
+    font-weight: 600;
+}
+
+.logo{
+    max-width: 11.25em;    
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;    
+}
+
+.logo img{
+    max-width: 5em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%; 
+    margin: auto;
+}
+
+.redes img{     
+    display: flex;
+    max-width: 1.5em;
+    margin: .3em;
+}
+
+@media all and (max-width:1180px) {
+ 
+    .logo {
+        display: none;          
+    }
+
+    .logos{
+        width: 100%;
+        align-content: space-between;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+
+    }
+
+    .logos img{
+        max-width: 5em;
+    }
+   
+    .logomovil{    
+        margin: auto;
+        display: flex;
+    }
+
+}
+
+@media all and (max-width:768px) {
+ 
+    .logo {
+        display: none;          
+    }  
+    
+    .menu{
+        font-size: .8em;
+        margin: .2em;
+    }
+}
+
+/*Fin del Encabezado*/
+
+#separador{
+    background-color: white;
+    height: 3em;
+    width: 100%;
+}
+
+section{   
+    width: 100%;  
+}
+/*Inicia Acerca de*/
+
+#acerca{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;  
+    align-content: space-between;  
+    padding-top: 5em;    
+  
+}
+
+.gift{    
+    width: 14%; 
+    padding-left: 1.5em; 
+    display: flex;
+    margin: auto;
+}
+
+.gift img{
+    width: 100%;
+   
+}
+
+#contenedor1{
+    width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+.carousel {
+
+    overflow: hidden;
+    position: relative;
+
+}
+.slider {   
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;    
+    background-color: var(--blanco);  
+    padding: 0em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+    overflow: hidden;
+}
+.slider .slide{
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.slide img{
+    width: 100%;
+}
+
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.arrow img{
+    width: 2em;
+}
+
+.left {
+    left: 10px;
+}
+.right {
+    right: 10px;
+}
+.control ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%);
+}
+.control ul li {
+    color:#9F94C7;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 5px;
+}
+.control ul li.selected {
+    color:#524A7B;
+}
+  
+@media all and (max-width:768px) {
+    .gift{
+        display: none;
+    }
+
+    #slider{
+        width: 100%;
+        padding: 0em;
+    } 
+    
+    .arrow img{
+        width: 1em;
+    }
+
+    .control ul li{
+        font-size: 1em;
+    }
+}
+
+
+/*Finaliza Acerca de*/
+
+/*Inicia Descargas*/
+
+#descarga{
+    background-image: url(../img/Descarga\ el\ informe.png);  
+    background-size: cover;   
+    display: flex;
+    flex-flow: row nowrap;  
+
+}
+
+#prev-informe{
+    width: 75%; 
+    display: flex; 
+    align-content: center;
+}
+
+/*#prev-informe embed{
+    display: flex;
+    padding: 1.5em;
+    margin: auto;
+    width: 50em;  
+}*/
+
+.reporte{
+    width:100%;
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;    
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding: 6em;  
+}
+
+.reporte img {
+    width:100%;
+    max-width: 35em;
+    display: flex;        
+    align-content: center;    
+    flex-flow: wrap; 
+         
+
+}
+
+.botones{
+    width: 25%;
+    display: flex;    
+    flex-flow: column;
+    align-content: center;
+    margin: auto;
+}
+
+.botones a{
+    font-size: 1em;
+    height: 2em;
+    width: 13em;    
+    background-color: #E8EA9A;
+    border-radius: .8em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin: .5em; 
+    font-family: 'Montserrat', sans-serif;  
+    color: #524A7B;
+    font-weight: 400;
+}
+
+.botones a:hover{
+    
+    font-weight: 600;
+} 
+
+@media all and (max-width:768px) {
+    
+    #descarga{
+        display: flex;
+        flex-flow: column;
+        margin: auto;
+        width: 100%;
+        align-content: center;
+    }  
+    
+    .reporte{
+        padding: 1em;
+    }
+
+    .botones{
+        width:100%;
+        display: flex;
+        flex-flow: wrap;
+        margin: auto;
+        align-content: space-between;
+        padding-bottom: 1em;
+    
+    }
+
+   .botones a{
+       margin: auto;
+       font-size: .8em;
+
+    }
+
+}
+/*Fin de Descargas*/
+
+/*Inicia Hallazgos*/
+#hallazgos{
+    background-image: url(../img/Hallazgos.png); 
+    background-size: cover;   
+    width:100%; 
+}
+
+#graficos{    
+    width:100%; 
+    padding-top:3em;
+    padding-bottom: 4em;
+    align-content: center;     
+
+}
+
+#contenedor2{
+    width: 75%;
+    margin: auto; 
+    display: flex;
+}
+
+.carousel2 {
+    width: 100%;
+    overflow: hidden;   
+}
+
+.slider2 {   
+    width: 1000%;
+    display: flex;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;    
+    background-color: var(--blanco);  
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+    overflow: hidden;
+}
+
+.slider2 .slide2{
+    flex-basis: 100%;   
+    align-items: center;
+    display: flex;
+    
+}
+
+.slide2 img{
+    width: 100%;
+
+}
+
+.control2 .arrow2{ 
+    display: flex;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+.control2 .arrow2 img{
+    width: 3em;
+}
+
+
+.control2 .left2 {
+    margin-right: 10px; 
+    cursor: pointer; 
+}
+
+.control2 .right2 {
+    margin-left: 10px;   
+    cursor: pointer;
+}
+
+.control2 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.control2 ul li {
+    color:#9F94C7;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 5px;  
+}
+.control2 ul li.selected2 {
+    color:#524A7B;
+}
+
+@media all and (max-width:768px) {
+    #contenedor2{
+        width: 100%;
+    }
+
+    .control2 .arrow2 img{
+        width: 2em;
+    }
+
+    .control2 ul li{
+        font-size: 1em;
+
+    }
+
+}
+  
+
+/*Fin de Hallazgos*/
+
+/*Inicia Entrevistas*/
+
+#entrevistas{
+    background-image: url(../img/Entrevistas.png); 
+    background-size: cover;
+    height: auto;
+    padding-top: 5em;
+    padding-bottom: 5.5em;
+}
+
+.capitulos{
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;    
+}
+
+.capitulospotify{
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 45%;
+    align-content: center;
+}
+
+.spotify{
+
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+
+}
+
+.spotify iframe{
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+    height: 14.5em;
+}
+
+.capitulospotify a{
+    font-size: 1em;
+    height: auto;
+    width: auto;    
+    background-color: #E8EA9A;
+    border-radius: .8em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin-top: 1em;
+    font-family: 'Montserrat', sans-serif;  
+    color:#524A7B;
+    font-weight: 400;
+    padding:  .5em;
+}
+
+.capitulospotify a:hover{   
+    font-weight: 600;    
+} 
+
+#capitulosyou{
+    display: flex;
+    flex-flow: column;  
+    margin: auto;
+    background-color: white;
+    padding: .8em;
+}
+
+.capitulosyou iframe{
+    margin: auto;
+    padding: .8em;
+    width: 100%;
+    max-width: 12em;
+    height: 8em;    
+}
+
+@media all and (max-width:768px) {
+    .entrevistas{
+        display: flex;
+        flex-flow: wrap;
+        margin: auto;
+    }
+
+    .capitulospotify{
+        display: flex;
+        flex-flow: wrap;  
+        margin: auto;
+        width: 100%;
+        padding: 1em;     
+    }
+
+    .capitulospotify{
+        font-size: .8em;
+    }
+
+}
+
+/*Fin de Entrevistas*/
+
+/*Inicio Footer*/
+
+footer{
+    background-color: #E5D7C0;
+}
+/*Fin de Footer*/
+
+.pie.de.pagina{
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    padding: 3em;
+}
+
+.transversalgris{
+    max-width: 12em;       
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+}
+
+.transversalgris img{
+    width: 100%;
+    max-width: 11em;
+    margin: auto; 
+}
+
+.contacto{
+    max-width: 20em;       
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.contacto .p{         
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+}
+
+.contacto .redes2{
+    display: flex;
+    flex-direction: row;  
+    padding: 3.4em; 
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%; 
+    margin: auto; 
+}
+
+.redes2 img{     
+    display: flex;
+    max-width: 1.5em;
+    margin: .3em;
+}
+
+.contacto button{
+    font-size: 1em;
+    height: auto;
+    width: auto;    
+    background-color: #58585A;
+    border-radius: .8em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;  
+    color: white;
+    font-weight: 400;
+    padding: .5em;
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+}
+
+.contacto button:hover{   
+    font-weight: 600;    
+} 
+
+
+.logoconsul{
+    max-width: 12em;       
+    display: flex;
+    flex-flow: wrap;  
+    margin: auto;
+    width: 100%;
+}
+
+.logoconsul img{
+    width: auto;
+    max-width: 9em;
+    padding-top: 2em; 
+    margin: auto;
+}
+
+@media all and (max-width:768px) {
+    .contacto{
+        font-size: .8em;
+}
+}
