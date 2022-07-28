@@ -2,11 +2,14 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-size: 16px;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+
 
 /*Inica Encabezado*/
 
@@ -16,7 +19,6 @@ header{
     left: 0%;
     top: 0%;
     background-color: white;
-    align-items: center;
     z-index: 1;
 
 }
@@ -31,62 +33,71 @@ header{
     height: 7em;
 }
 
-.transversal{
+.logopisos{
     width: 100%;
-    max-width: 11.25em;
+    max-width: 8em;
     margin: auto; 
     display: flex; 
     flex-wrap: wrap;
     height: 100%;
     align-items: center;
-    padding-left: 2em;
 }
 
-.transversal img{
+.logopisos img{
+    width: auto;
+    max-width: 5.5em;
+    margin: auto;    
+}
+
+.logos{
     width: 100%;
-    max-width: 10em;
-    margin: auto;    
-}
-
-.logomovil{
-    display: none;
-}
-
-.menu{    
-    margin: auto;    
-    width: 45em;
-    justify-content: space-between; 
+    align-content: space-between;
     display: flex;
     flex-direction: row;
+}
+
+.logomovil{    
+    margin: auto;
+    display: flex;    
+}
+
+.logomovil img{
+    width: auto;
+    max-width: 8em;
+    margin: auto;  
+}
+.menu{    
+    margin: auto;    
+    max-width: 30em;
+    justify-content: space-between; 
+    display: flex;
     flex-wrap: wrap;
+    width:100%;
 }
 
 .menu a{
-    width: auto;
-    text-align: center;
-    font-size: 1em;
+    width: 100%;
+    text-align: center;    
     text-decoration: none;   
     font-weight: 400;
     color: #9F94C7;
-    height: 2em;
+    height: 2em;    
+    font-size: .8em;
+    max-width: max-content;
+    margin: auto;   
 }
+
 
 .menu a:hover{
     color: #524A7B;
     font-weight: 600;
 }
 
-.logo{
-    max-width: 11.25em;    
-    width: 100%; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;    
-}
+.logo {
+    display: none;          
+} 
 
 .logo img{
-    max-width: 5em;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -94,56 +105,49 @@ header{
     width: 100%;
 }
 
-.redes {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    width: 100%; 
-    margin: auto;
-}
+@media all and (min-width:884px){
 
-.redes img{     
-    display: flex;
-    max-width: 1.5em;
-    margin: .3em;
-}
-
-@media all and (max-width:1180px) {
- 
-    .logo {
-        display: none;          
+    .logomovil{
+        display: none;
     }
 
-    .logos{
-        width: 100%;
-        align-content: space-between;
+    .menu{
+        font-size: 1.2em;
+        margin: auto;
+      
+    }
+
+    .logo{
+        max-width: 11.25em;    
+        width: 100%; 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;  
+        padding: .8em;  
+    }
+
+    .redes {
         display: flex;
         flex-direction: row;
         align-content: space-between;
-
-    }
-
-    .logos img{
-        max-width: 5em;
-    }
-   
-    .logomovil{    
+        width: 100%; 
         margin: auto;
-        display: flex;
     }
-
-}
-
-@media all and (max-width:768px) {
- 
-    .logo {
-        display: none;          
-    }  
     
-    .menu{
-        font-size: .8em;
-        margin: .2em;
+    .redes img{     
+        display: flex;
+        max-width: 1.5em;
+        margin: .3em;
     }
+
+    .logos{
+        align-items: left;
+        max-width: 8em;
+        width: 100%;
+        margin: auto;
+    }
+
 }
 
 /*Fin del Encabezado*/
@@ -169,20 +173,8 @@ section{
   
 }
 
-.gift{    
-    width: 14%; 
-    padding-left: 1.5em; 
-    display: flex;
-    margin: auto;
-}
-
-.gift img{
-    width: 100%;
-   
-}
-
 #contenedor1{
-    width: 85%;
+    width: 100%;
     margin: auto;
     flex-wrap: wrap;
     display: flex;
@@ -194,8 +186,8 @@ section{
     margin: auto;
     flex-wrap: wrap;
     display: flex;
-
 }
+
 .carousel {
 
     overflow: hidden;
@@ -221,7 +213,6 @@ section{
     justify-content: center;
     align-items: center;
     display: flex;
-
 }
 
 .slide img{
@@ -237,7 +228,7 @@ section{
 
 
 .arrow img{
-    width: 2em;
+    width: 1em;
 }
 
 .left {
@@ -258,33 +249,29 @@ section{
 }
 .control ul li {
     color:#9F94C7;
-    font-size: 2em;
+    font-size: 1em;
     cursor: pointer;
     margin: 5px;
 }
 .control ul li.selected {
     color:#524A7B;
 }
-  
-@media all and (max-width:768px) {
-    .gift{
-        display: none;
-    }
 
-    #slider{
-        width: 100%;
-        padding: 0em;
-    } 
+@media all and (min-width:884px){
     
-    .arrow img{
-        width: 1em;
+    .control ul li {
+        font-size: 2em
     }
 
-    .control ul li{
-        font-size: 1em;
+    .arrow img{
+        width: 2em;
+    }
+
+    #contenedor1{
+        width: 85%;
     }
 }
-
+  
 
 /*Finaliza Acerca de*/
 
@@ -294,14 +281,18 @@ section{
     background-image: url(../img/Descarga\ el\ informe.png);  
     background-size: cover;   
     display: flex;
-    flex-flow: row nowrap;  
+    flex-flow: column;
+    margin: auto;
+    width: 100%;
+    align-content: center;    
 
 }
 
 #prev-informe{
-    width: 75%; 
+    width: 100%; 
     display: flex; 
     align-content: center;
+    flex-flow: wrap;
 }
 
 /*#prev-informe embed{
@@ -316,31 +307,29 @@ section{
     display: flex;
     flex-flow: wrap;
     align-content: center;    
-    padding-top: 1em;
-    padding-bottom: 3em;
-    padding: 6em;  
+    padding: 1em;  
 }
 
 .reporte img {
     width:100%;
-    max-width: 35em;
+    max-width: 50em;
     display: flex;        
     align-content: center;    
-    flex-flow: wrap; 
-         
+    flex-flow: wrap;         
 
 }
 
 .botones{
-    width: 25%;
-    display: flex;    
-    flex-flow: column;
-    align-content: center;
+    display: flex;  
     margin: auto;
+    width:100%;
+    flex-flow: wrap;        
+    align-content: space-between;
+    padding-bottom: 1em;    
 }
 
 .botones a{
-    font-size: 1em;
+    font-size: .8em;    
     height: 2em;
     width: 13em;    
     background-color: #E8EA9A;
@@ -348,48 +337,46 @@ section{
     text-align: center;
     text-decoration: none;
     border: none;
-    margin: .5em; 
+    margin: auto;   
     font-family: 'Montserrat', sans-serif;  
     color: #524A7B;
     font-weight: 400;
 }
 
-.botones a:hover{
-    
+.botones a:hover{    
     font-weight: 600;
 } 
 
-@media all and (max-width:768px) {
-    
-    #descarga{
-        display: flex;
-        flex-flow: column;
-        margin: auto;
-        width: 100%;
-        align-content: center;
+@media all and (min-width:884px){
+    #descarga{        
+        flex-flow: row nowrap; 
     }  
     
-    .reporte{
-        padding: 1em;
-    }
-
-    .botones{
-        width:100%;
+    #prev-informe{
         display: flex;
-        flex-flow: wrap;
-        margin: auto;
-        align-content: space-between;
-        padding-bottom: 1em;
-    
+    }  
+
+    .reporte{    
+        padding-left: 6em;
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
 
-   .botones a{
-       margin: auto;
-       font-size: .8em;
+    .botones{           
+        width: 25%;      
+        flex-flow: column;
+        align-content: center;
+          
+    }
 
+    .botones a{     
+        font-size: 1em;
+        margin: .5em; 
     }
 
 }
+
+
 /*Fin de Descargas*/
 
 /*Inicia Hallazgos*/
@@ -408,7 +395,7 @@ section{
 }
 
 #contenedor2{
-    width: 75%;
+    width: 100%;
     margin: auto; 
     display: flex;
 }
@@ -450,7 +437,7 @@ section{
 }
 
 .control2 .arrow2 img{
-    width: 3em;
+    width: 2em;
 }
 
 
@@ -473,7 +460,7 @@ section{
 }
 .control2 ul li {
     color:#9F94C7;
-    font-size: 2em;
+    font-size: 1em;
     cursor: pointer;
     margin: 5px;  
 }
@@ -481,17 +468,18 @@ section{
     color:#524A7B;
 }
 
-@media all and (max-width:768px) {
+@media all and (min-width:884px){
+
     #contenedor2{
-        width: 100%;
+        width: 75%;
     }
 
     .control2 .arrow2 img{
-        width: 2em;
+        width: 3em;
     }
 
     .control2 ul li{
-        font-size: 1em;
+        font-size: 2em;
 
     }
 
@@ -521,8 +509,10 @@ section{
     display: flex;
     flex-flow: wrap;  
     margin: auto;
-    width: 45%;
-    align-content: center;
+    width: 100%;
+    max-width: 40em;
+    padding: 1em;
+    
 }
 
 .spotify{
@@ -543,7 +533,7 @@ section{
 }
 
 .capitulospotify a{
-    font-size: 1em;
+    font-size: .8em;
     height: auto;
     width: auto;    
     background-color: #E8EA9A;
@@ -574,39 +564,31 @@ section{
     margin: auto;
     padding: .8em;
     width: 100%;
-    max-width: 12em;
-    height: 8em;    
+    max-width: 20em;
+    height: 10em;    
 }
 
-@media all and (max-width:768px) {
-    .entrevistas{
-        display: flex;
-        flex-flow: wrap;
-        margin: auto;
-    }
+
+@media all and (min-width:884px){
 
     .capitulospotify{
-        display: flex;
-        flex-flow: wrap;  
-        margin: auto;
-        width: 100%;
-        padding: 1em;     
+        width: 45%; 
+        align-content: center;  
     }
 
-    .capitulospotify{
-        font-size: .8em;
+    .capitulospotify a{
+        font-size: 1em
     }
-
 }
-
 /*Fin de Entrevistas*/
 
 /*Inicio Footer*/
 
 footer{
     background-color: #E5D7C0;
+    font-size: .8;
 }
-/*Fin de Footer*/
+
 
 .pie.de.pagina{
     display: flex;
@@ -639,12 +621,16 @@ footer{
     width: 100%;
     align-content: center;
     text-align: center;
+    text-decoration: none;
+    color: #58585A;    
 }
 
 .contacto .p{         
     display: flex;
     flex-flow: wrap;  
     margin: auto;
+   
+    
 }
 
 .contacto .redes2{
@@ -664,7 +650,6 @@ footer{
 }
 
 .contacto button{
-    font-size: 1em;
     height: auto;
     width: auto;    
     background-color: #58585A;
@@ -682,6 +667,15 @@ footer{
 }
 
 .contacto button:hover{   
+    font-weight: 600;    
+}
+
+.contacto a{   
+    text-decoration: none;  
+    color: #524A7B;   
+}
+
+.contacto a:hover{   
     font-weight: 600;    
 } 
 
@@ -701,8 +695,4 @@ footer{
     margin: auto;
 }
 
-@media all and (max-width:768px) {
-    .contacto{
-        font-size: .8em;
-}
-}
+/*Fin de Footer*/
